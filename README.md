@@ -1,1 +1,1 @@
-# tradutor-in-angular
+# angular translator

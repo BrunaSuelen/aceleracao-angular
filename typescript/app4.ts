@@ -1,6 +1,4 @@
-import {ConcessionariaDao} from './ConcessionariaDao'
 import Concessionaria from './Concessionaria'
-import { PessoaDao } from './PessoaDAO'
 import Pessoa from './Pessoa'
 import { Dao } from './Dao';
 
@@ -14,8 +12,8 @@ import { Dao } from './Dao';
 
 // dao2.atualizar(pessoa);
 
-let pessoa: Pessoa = new Pessoa('','')
-let concessionaria: Concessionaria = new Concessionaria('',[])
+let pessoa: Pessoa = new Pessoa('', '')
+let concessionaria: Concessionaria = new Concessionaria('', [])
 
 let dao3: Dao<Concessionaria> = new Dao<Concessionaria>();
 let dao4: Dao<Pessoa> = new Dao<Pessoa>();

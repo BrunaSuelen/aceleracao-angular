@@ -1,7 +1,7 @@
-import {DaoInterface} from './DaoInterface'
+import { DaoInterface } from './DaoInterface'
 import Concessionaria from './Concessionaria';
 
-export class ConcessionariaDao implements DaoInterface {
+export class ConcessionariaDao implements DaoInterface<Concessionaria> {
 
     nomeTabela: string = 'tb_concessionaria'
 
@@ -17,12 +17,12 @@ export class ConcessionariaDao implements DaoInterface {
 
     remover(id: number): Concessionaria {
         console.log('logica de delete');
-        return new Concessionaria('',[])
+        return new Concessionaria('', [])
     }
 
     selecionar(id: number): Concessionaria {
         console.log('logica de select');
-        return new Concessionaria('',[])
+        return new Concessionaria('', [])
     }
 
     selecionarTodos(): [any] {

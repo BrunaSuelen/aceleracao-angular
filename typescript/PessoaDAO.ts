@@ -1,7 +1,7 @@
-import {DaoInterface} from './DaoInterface'
+import { DaoInterface } from './DaoInterface'
 import Pessoa from './Pessoa';
 
-export class PessoaDao implements DaoInterface {
+export class PessoaDao implements DaoInterface<Pessoa> {
 
     nomeTabela: string = 'tb_Pessoa'
 
@@ -17,12 +17,12 @@ export class PessoaDao implements DaoInterface {
 
     remover(id: number): Pessoa {
         console.log('logica de delete');
-        return new Pessoa('','')
+        return new Pessoa('', '')
     }
 
     selecionar(id: number): Pessoa {
         console.log('logica de select');
-        return new Pessoa('','')
+        return new Pessoa('', '')
     }
 
     selecionarTodos(): [any] {

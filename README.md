@@ -7,11 +7,11 @@ Estrutura básica para norteamento de navegação no repositório.
 ```bash  
   ├── _projetos
   │  └── app1_aprendendoIngles
-  |
+  │
   ├── ecmascript
   │  ├── dados
-  │  |   └── piadas.json
-  |  |
+  │  │  └── piadas.json
+  │  │
   │  ├── class_parte_1.html
   │  ├── class_parte_2html
   │  ├── destructuring_parte_1.html
@@ -27,9 +27,9 @@ Estrutura básica para norteamento de navegação no repositório.
   │  ├── promises_parte_1.html
   │  ├── rest_spread_parte_1.html
   │  └── rest_spread_parte_2.html
-  |
+  │
   ├── typescript
-  |  
+  │
   │  ├── app.ts
   │  ├── app2.ts
   │  ├── app3.ts
@@ -46,6 +46,7 @@ Estrutura básica para norteamento de navegação no repositório.
   │  ├── tsconfig.json
   │  └── Veiculo.ts
 ```
+
 
 ### Versões
 - `NodeJs v14.18.0` 

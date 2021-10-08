@@ -1,0 +1,31 @@
+<html>
+  <body>
+    <script>
+      // DESTRUCTURING ASSIGNMENT NA ASSINATURA DE METODOS  -----------------------------------------------------------
+      // destructuring assignment no contexto de arrays
+      // se baseia na posição de indices
+
+
+      // ARRAY  -----------------------------------------------------
+      let arr = [10, 20, 30, 40]
+
+      function getArray([a, ,b]) {
+        console.log(a, b);
+      }
+      console.log(arr);
+
+      getArray(arr)
+
+      
+      // OBJETO  ----------------------------------------------------
+      let obj = { x: 'hy', y:'t', z:'c' }
+
+      function getObj({x, y}) {
+        console.log(x, y);
+      }
+
+      getObj(obj)
+
+    </script>
+  </body>
+</html>

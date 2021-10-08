@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <script>
+      // DESTRUCTURING ASSIGNMENT ARRAY  -----------------------------------------------------------
+      // destructuring assignment no contexto de arrays
+      // se baseia na posição de indices
+      let frutas = ['Abacaxi', 'Uva', 'Pera', 'Maça']
+      let [a, b] = frutas
+      console.log(a, b)
+
+
+      // PULANDO INDICES  ---------------------------------------------------------
+      let [c, d, , e] = frutas
+      console.log(a, b, e)
+
+
+      // VALORES PADRÃO  ----------------------------------------------------------
+      // Utilizando valor padrão caso não exista indices suficientes ou valor
+      // Ele dará prioridade aos valores vindos do vetor e só irá considerar o valor padrão caso o indice não possua um
+      let [f, g = 'Acerola' , h, i = 'Abacate'] = frutas
+      console.log(f, g, h, i)
+      
+      
+      // DESESTRUTURAÇÃO DE ARRAYS  -----------------------------------------------
+      let coisas = [['Abacaxi', 'Uva', 'Pera', 'Maça'], ['Jose', 'Maria']]
+      let [, [, x]] = coisas
+      console.log(x)
+    </script>
+  </body>
+</html>

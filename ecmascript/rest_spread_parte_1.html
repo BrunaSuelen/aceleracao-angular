@@ -1,0 +1,23 @@
+<script>
+  // spread --> utilizado para expandir strings, arrays e objetos
+
+  //string 
+  let titulo = 'Como utilizar o operador rest'
+  console.log(...title)
+  console.log([...title])
+  console.log({...title})
+
+  //arrays
+  let lista1 = ['NodeJS e MongoDB', 'Angular 12']
+  let lista2 = ['Solid', 'Spring Boot']
+  let listaCompleta = ['Java Completo', ...lista1, 'Bando de Dados Oracle', ...lista2]
+  console.log(listaCompleta)
+
+  //objetos
+  let pessoa = { nome: 'Bruna', idade: 20 }
+  let endereço = { bairro: 'Engenho velho', numero: 4 }
+  let cadastro1 = {...pessoa, ...endereço}
+  let cadastro2 = {pessoa: {...pessoa}, endereço: {...endereço}}
+  console.log(cadastro1, cadastro2)
+
+</script>

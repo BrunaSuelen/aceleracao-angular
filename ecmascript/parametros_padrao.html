@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <div id = "teste"></div>
+        <script>
+           function contarUmaHistoria(personagem = 'Pepper', atividade = 'jogar bola', nomeDono = 'Osvaldo') {
+               return `Era uma vez um cachorro chamado ${personagem}, 
+               ele adora ${atividade}, seu dono eh o ${nomeDono} 
+               e eles viveram felizes para sempre!`   
+           }
+           document.getElementById('teste').innerHTML = contarUmaHistoria(undefined, 'dormir e comer', 'Arthur')
+        </script>
+    </body>
+</html>

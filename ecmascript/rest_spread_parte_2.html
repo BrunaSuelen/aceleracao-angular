@@ -1,0 +1,27 @@
+<script>
+  // rest --> utilizado para condesar parametros em funções ou metodos
+
+  function soma(...p) {   
+    let resultado = 0
+    // console.log(p)
+    p.forEach(v => resultado += v )
+
+    return resultado
+  }
+
+  let x = soma(5, 7, 6, 76, 2, 756, 46, -8)
+  //  console.log('Resultado da soma: ', x)
+
+
+  function multiplicacao(m, ...n) {
+    let resultado = 0
+    console.log(m)
+    console.log(n)
+    n.forEach(v => resultado += m * v)
+
+    return resultado
+  }
+
+  let y = multiplicacao(5, 7, 6, 76, 2, 756, 46, -8)
+  console.log('Resultado da multiplicação: ', y)
+</script>

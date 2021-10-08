@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <script>
+      // DESTRUCTURING ASSIGNMENT OBJETO  -----------------------------------------------------------
+      // destructuring assignment no contexto de arrays
+      // se baseia na posição de estrutura (chave)
+      let produto = {
+        descricao: 'notebook',
+        preco: 23345,
+        detalhes: {
+          fabricante: 'abc',
+          modelo: 'def'
+        }
+      }
+
+      let { descricao, preco } = produto
+      console.log(descricao, preco)
+
+
+      // RENOMEANDO  -----------------------------------------------------------
+      let { descricao: d, preco: p } = produto
+      console.log(d, p)
+
+
+      // VALORES PADRÃO  -------------------------------------------------------
+      // Utilizando valor padrão caso não exista a chave ou valor
+      let { descricao: a, preco: b, desconto = 30, detalhes } = produto
+      console.log(a, b, desconto, detalhes)
+
+
+      // EXTRARIR ATRIBUTOS CONTIDOS EM OBJETOS INTERNOS   ---------------------
+      let { descricao: c, detalhes: { fabricante, validade: m = 'Não Informado(a)' } } = produto
+      console.log(c, desconto, detalhes, fabricante, m)
+    </script>
+  </body>
+</html>

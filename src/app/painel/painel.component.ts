@@ -19,11 +19,11 @@ export class PainelComponent implements OnInit {
 
   @Output() public encerrarJogo: EventEmitter<string> = new EventEmitter();
 
-  constructor() {
+  constructor() { }
+
+  ngOnInit(): void {
     this.atualizaRodada();
   }
-
-  ngOnInit(): void { }
 
   public atualizaResposta(resposta: Event): void {
     this.resposta = (<HTMLInputElement>resposta.target).value;
@@ -34,21 +34,15 @@ export class PainelComponent implements OnInit {
       this.rodada++;
       this.progresso += (100 / this.frases.length);
 
-      if (this.rodada === this.frases.length) {
-        this.encerrarJogo.emit('vitoria');
-        return alert('Você concluiu as traduções com sucesso!');
-      }
-
-      return this.atualizaRodada();
+      return this.rodada === this.frases.length
+        ? this.encerrarJogo.emit('vitoria')
+        : this.atualizaRodada();
     }
 
     this.tentativas--;
-    if (this.tentativas === 0) {
-      this.encerrarJogo.emit('derrota');
-      return alert('Você perdeu todas as tentativas :(')
-    }
-
-    alert('A tradução está errada!');
+    this.tentativas === 0
+      ? this.encerrarJogo.emit('derrota')
+      : alert('A tradução está errada!');
   }
 
   private frasesIguais(): boolean {

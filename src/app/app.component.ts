@@ -9,10 +9,24 @@ export class AppComponent {
   title = 'Aprendendo Inglês';
 
   public jogoEmAndamento: boolean = true;
-  public tipoEncerramento!: string;
+  public vitoria!: boolean;
+  public conteudoDeEncerramento!: any;
 
   public encerrarJogo(tipo: string): void {
     this.jogoEmAndamento = false;
-    this.tipoEncerramento = tipo;
+    this.vitoria = tipo == 'vitoria';
+
+    this.conteudoDeEncerramento = {
+      mensagem: this.vitoria
+        ? 'Parabêns!! Você acertou todas as traduções'
+        : 'Fim de Jogo, infelizmente você perdeu! :(',
+      color: this.vitoria
+        ? 'green'
+        : 'red'
+    }
+  }
+
+  public reiniciarJogo(): void {
+    this.jogoEmAndamento = true;
   }
 }

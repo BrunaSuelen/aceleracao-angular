@@ -1,11 +1,16 @@
-import OFERTAS from './data/mock/ofertas.mock';
 import { Oferta } from './shared/ofertas.model';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class OfertasService {
 
-  private ofertas: Array<Oferta> = OFERTAS;
+  constructor(private http: HttpClient) { }
 
-  public getOfertas(): Array<Oferta> {
-    return this.ofertas;
+  public getOfertas(): Promise<Oferta[]> {
+    return this.http.get('http://localhost:3000/ofertas?destaque=true')
+      .toPromise()
+      .then((resposta: any) => resposta)
+    // return this.ofertas;
   }
 }

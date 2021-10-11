@@ -4,11 +4,11 @@
 
 ## Dependências
 - [`NodeJs 14.18.0`](https://nodejs.org/en/download/)
-- `Angular 12.2.8`
-- `Typescript 4.4.3`
-- `Jquery 3.6.0`
-- `Tether 2.0.0`
-- `Json Serve`
+- [`Angular 12.2.8`](https://angular.io/docs)
+- [`Typescript 4.4.3`](https://www.typescriptlang.org/)
+- [`Jquery 3.6.0`](https://jquery.com/)
+- [`Tether 2.0.0`](https://tether.to/)
+- [`Json Serve`](https://github.com/typicode/json-server)
 
 ## Instalações
 

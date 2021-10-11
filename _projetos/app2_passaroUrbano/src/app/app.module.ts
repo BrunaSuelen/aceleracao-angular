@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { TopoComponent } from './topo/topo.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { HomeComponent } from './home/home.component';
+import { RestaurantesComponent } from './restaurantes/restaurantes.component';
+import { DiversaoComponent } from './diversao/diversao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopoComponent,
     RodapeComponent,
-    HomeComponent
+    HomeComponent,
+    RestaurantesComponent,
+    DiversaoComponent
   ],
   imports: [
     BrowserModule,

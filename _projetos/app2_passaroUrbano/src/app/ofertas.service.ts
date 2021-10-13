@@ -2,6 +2,8 @@ import { Oferta } from './shared/ofertas.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { URL_API } from './shared/app.api';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class OfertasService {
@@ -40,5 +42,11 @@ export class OfertasService {
       .then((resposta: any) => {
         return resposta.shift().descricao
       })
+  }
+
+  public pesquisaOfertas(termo: string): Observable<Oferta[]> {
+    return this.http
+      .get<Oferta[]>(`${URL_API}ofertas?descricao_oferta_like=${termo}`)
+      .pipe(map((resposta) => resposta))
   }
 }

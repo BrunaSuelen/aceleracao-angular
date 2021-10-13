@@ -4,6 +4,15 @@
       <a routerLink="" class="navbar-brand">
         <img src="/assets/logo.png" />
       </a>
+      <div class="col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          (keyup)="pesquisa(termoDaPesquisa.value)"
+          #termoDaPesquisa
+          placeholder="Pesquise por ofertas"
+        />
+      </div>
       <a routerLink=""><img src="/assets/carrinho.png" /></a>
     </div>
   </nav>

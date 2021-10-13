@@ -1,8 +1,12 @@
 span {
-    color: #fff;
+  color: #fff;
 }
 
+.fixed-bottom {
+  margin-top: 20px;
+}
 .row {
-    background: #0057A6;
-    padding: 10px
+  background: #0057a6;
+  padding: 10px;
+  margin-top: 20px;
 }

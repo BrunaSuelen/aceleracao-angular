@@ -13,7 +13,6 @@ import { Oferta } from '../shared/ofertas.model';
 export class TopoComponent implements OnInit {
 
   public ofertas!: Observable<Oferta[]>
-  public ofertasPesquisa!: Oferta[]
 
   private subjectPesquisa: Subject<string> = new Subject<string>()
 
@@ -38,16 +37,10 @@ export class TopoComponent implements OnInit {
       }))
       // Tratamento caso tenha error
       .pipe(catchError((erro: any) => of<Oferta[]>([])))
-
-    this.ofertas.subscribe((ofertas: Oferta[]) => {
-      console.log('ofertas', ofertas)
-      this.ofertasPesquisa = ofertas;
-    })
   }
 
   public pesquisa(termoDaPesquisa: string): void {
     this.subjectPesquisa.next(termoDaPesquisa.trim())
-    console.log('keyup', termoDaPesquisa)
 
     // this.ofertas = this.ofertasService.pesquisaOfertas(termoDaPesquisa);
 

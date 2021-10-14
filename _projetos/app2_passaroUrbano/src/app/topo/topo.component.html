@@ -12,6 +12,11 @@
           #termoDaPesquisa
           placeholder="Pesquise por ofertas"
         />
+        <ul class="list-group" style="position: absolute">
+          <li class="list-group-item" *ngFor="let oferta of ofertasPesquisa">
+            {{ oferta.titulo }}
+          </li>
+        </ul>
       </div>
       <a routerLink=""><img src="/assets/carrinho.png" /></a>
     </div>

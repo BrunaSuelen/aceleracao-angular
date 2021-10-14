@@ -13,6 +13,7 @@ import { Oferta } from '../shared/ofertas.model';
 export class TopoComponent implements OnInit {
 
   public ofertas!: Observable<Oferta[]>
+  public ofertasPesquisa!: Oferta[]
 
   private subjectPesquisa: Subject<string> = new Subject<string>()
 
@@ -38,6 +39,7 @@ export class TopoComponent implements OnInit {
 
     this.ofertas.subscribe((ofertas: Oferta[]) => {
       console.log('ofertas', ofertas)
+      this.ofertasPesquisa = ofertas;
     })
   }
 

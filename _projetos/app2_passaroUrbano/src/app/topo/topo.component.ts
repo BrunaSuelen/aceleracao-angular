@@ -20,6 +20,10 @@ export class TopoComponent implements OnInit {
   constructor(private ofertasService: OfertasService) { }
 
   ngOnInit(): void {
+    this.iniciarObservadorDePesquisa();
+  }
+
+  private iniciarObservadorDePesquisa() {
     this.ofertas = this.subjectPesquisa
       // Aciona o subscribe após 1000 milisegundos
       .pipe(debounceTime(1000))
@@ -33,9 +37,7 @@ export class TopoComponent implements OnInit {
           : this.ofertasService.pesquisaOfertas(termo)
       }))
       // Tratamento caso tenha error
-      .pipe(catchError((erro: any) => {
-        return of<Oferta[]>([])
-      }))
+      .pipe(catchError((erro: any) => of<Oferta[]>([])))
 
     this.ofertas.subscribe((ofertas: Oferta[]) => {
       console.log('ofertas', ofertas)

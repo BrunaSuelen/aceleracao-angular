@@ -22,41 +22,51 @@ export class OrdemCompraComponent implements OnInit {
   public complementoEstadoPrimitivo: boolean = true;
   public formaPagamentoEstadoPrimitivo: boolean = true;
 
+  public formEstado: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  atualizaEndereco(endereco: string) {
+  public atualizaEndereco(endereco: string) {
     this.endereco = endereco;
     this.enderecoEstadoPrimitivo = false;
 
     this.enderecoValido = this.endereco.length > 0;
     console.log(this.endereco);
+    this.habilitarForm();
   }
 
-  atualizaNumero(numero: string) {
+  public atualizaNumero(numero: string) {
     this.numero = numero;
     this.numeroEstadoPrimitivo = false;
 
-    this.numeroValido = this.numero.length > 0 ;
+    this.numeroValido = this.numero.length > 0;
     console.log(this.numero);
+    this.habilitarForm();
   }
 
-  atualizaComplemento(complemento: string) {
+  public atualizaComplemento(complemento: string) {
     this.complemento = complemento;
     this.complementoEstadoPrimitivo = false;
 
     this.complementoValido = this.complemento.length > 0;
     console.log(this.complemento);
+    this.habilitarForm();
   }
 
-  atualizaFormaPagamento(formaPagamento: string) {
+  public atualizaFormaPagamento(formaPagamento: string) {
     this.formaPagamento = formaPagamento;
     this.formaPagamentoEstadoPrimitivo = false;
 
     this.formaPagamentoValido = this.formaPagamento.length > 0;
     console.log(this.formaPagamento);
+    this.habilitarForm();
+  }
+
+  public habilitarForm(): void {
+    this.formEstado = !(this.enderecoValido && this.numeroValido && this.complementoValido && this.formaPagamentoValido)
   }
 
 }

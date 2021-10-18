@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="ordem-compra">
+  <div class="ordem-compra" *ngIf="idPedidoCompra === undefined">
     <form novalidate>
       <h5>Sua Compra</h5>
       <hr />
@@ -206,12 +206,19 @@
 
       <hr />
       <button
-        type="submit"
+        type="button"
         [disabled]="formEstado"
         class="btn btn-primary btn-lg"
+        (click)="confirmarCompra()"
       >
         Confirmar compra
       </button>
     </form>
+  </div>
+
+  <div class="ordem-compra" *ngIf="idPedidoCompra !== undefined">
+    <app-ordem-compra-sucesso
+      [idPedidoCompra]="idPedidoCompra"
+    ></app-ordem-compra-sucesso>
   </div>
 </div>

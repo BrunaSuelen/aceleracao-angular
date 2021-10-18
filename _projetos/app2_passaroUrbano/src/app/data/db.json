@@ -9,10 +9,18 @@
       "valor": 29.9,
       "destaque": true,
       "imagens": [
-        { "url": "/assets/ofertas/1/img1.jpg" },
-        { "url": "/assets/ofertas/1/img2.jpg" },
-        { "url": "/assets/ofertas/1/img3.jpg" },
-        { "url": "/assets/ofertas/1/img4.jpg" }
+        {
+          "url": "/assets/ofertas/1/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img4.jpg"
+        }
       ]
     },
     {
@@ -24,10 +32,18 @@
       "valor": 32.9,
       "destaque": true,
       "imagens": [
-        { "url": "/assets/ofertas/2/img1.jpg" },
-        { "url": "/assets/ofertas/2/img2.jpg" },
-        { "url": "/assets/ofertas/2/img3.jpg" },
-        { "url": "/assets/ofertas/2/img4.jpg" }
+        {
+          "url": "/assets/ofertas/2/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/2/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/2/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/2/img4.jpg"
+        }
       ]
     },
     {
@@ -39,10 +55,18 @@
       "valor": 21.9,
       "destaque": false,
       "imagens": [
-        { "url": "/assets/ofertas/3/img1.jpg" },
-        { "url": "/assets/ofertas/3/img2.jpg" },
-        { "url": "/assets/ofertas/3/img3.jpg" },
-        { "url": "/assets/ofertas/3/img4.jpg" }
+        {
+          "url": "/assets/ofertas/3/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/3/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/3/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/3/img4.jpg"
+        }
       ]
     },
     {
@@ -54,12 +78,24 @@
       "valor": 31.9,
       "destaque": true,
       "imagens": [
-        { "url": "/assets/ofertas/4/img1.jpg" },
-        { "url": "/assets/ofertas/4/img2.jpg" },
-        { "url": "/assets/ofertas/4/img3.jpg" },
-        { "url": "/assets/ofertas/4/img4.jpg" },
-        { "url": "/assets/ofertas/4/img5.jpg" },
-        { "url": "/assets/ofertas/4/img6.jpg" }
+        {
+          "url": "/assets/ofertas/4/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img4.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img5.jpg"
+        },
+        {
+          "url": "/assets/ofertas/4/img6.jpg"
+        }
       ]
     },
     {
@@ -71,8 +107,12 @@
       "valor": 54.9,
       "destaque": false,
       "imagens": [
-        { "url": "/assets/ofertas/5/img1.jpg" },
-        { "url": "/assets/ofertas/5/img2.jpg" }
+        {
+          "url": "/assets/ofertas/5/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/5/img2.jpg"
+        }
       ]
     },
     {
@@ -84,8 +124,12 @@
       "valor": 89.9,
       "destaque": false,
       "imagens": [
-        { "url": "/assets/ofertas/6/img1.jpg" },
-        { "url": "/assets/ofertas/6/img2.jpg" }
+        {
+          "url": "/assets/ofertas/6/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/6/img2.jpg"
+        }
       ]
     }
   ],
@@ -139,6 +183,22 @@
     {
       "id": 6,
       "descricao": "Estrada Maria das Graças, 12, Salvador - BA "
+    }
+  ],
+  "pedidos": [
+    {
+      "endereco": "j",
+      "numero": "i",
+      "complemento": "ji",
+      "formaPagamento": "debito",
+      "id": 1
+    },
+    {
+      "endereco": "de",
+      "numero": "fdf",
+      "complemento": "d",
+      "formaPagamento": "dinheiro",
+      "id": 2
     }
   ]
 }

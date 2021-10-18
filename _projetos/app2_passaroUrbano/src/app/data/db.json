@@ -199,6 +199,27 @@
       "complemento": "d",
       "formaPagamento": "dinheiro",
       "id": 2
+    },
+    {
+      "endereco": "av. oratorio",
+      "numero": "123",
+      "complemento": "casa B",
+      "formaPagamento": "debito",
+      "id": 3
+    },
+    {
+      "endereco": "teste",
+      "numero": "7",
+      "complemento": "",
+      "formaPagamento": "dinheiro",
+      "id": 4
+    },
+    {
+      "endereco": "mkknj",
+      "numero": "2",
+      "complemento": "",
+      "formaPagamento": "debito",
+      "id": 5
     }
   ]
 }

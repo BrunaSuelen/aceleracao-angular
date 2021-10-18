@@ -220,6 +220,13 @@
       "complemento": "",
       "formaPagamento": "debito",
       "id": 5
+    },
+    {
+      "endereco": "njnj",
+      "numero": "nj",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "id": 6
     }
   ]
 }

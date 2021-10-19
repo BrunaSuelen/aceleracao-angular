@@ -1,0 +1,17 @@
+.toast {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 9999;
+}
+
+.toast-header img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.toast-body p {
+  margin-bottom: 0;
+}

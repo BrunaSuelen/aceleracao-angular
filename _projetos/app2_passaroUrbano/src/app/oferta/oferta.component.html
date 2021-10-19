@@ -1,5 +1,9 @@
 <div class="container">
   <div class="oferta" *ngIf="oferta">
+    <app-toast-pedido-sucesso
+      [oferta]="oferta"
+      [exibirToast]="exibirToast"
+    ></app-toast-pedido-sucesso>
     <div class="row">
       <div class="col">
         <h4>{{ oferta.descricao_oferta }}</h4>
@@ -77,4 +81,3 @@
     </div>
   </div>
 </div>
-<app-toast-pedido-sucesso></app-toast-pedido-sucesso>

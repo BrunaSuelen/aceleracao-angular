@@ -246,6 +246,25 @@
         }
       ],
       "id": 7
+    },
+    {
+      "endereco": "knj",
+      "numero": "njnj",
+      "complemento": "njkn",
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 4,
+          "titulo": "Estância das águas",
+          "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "valor": 31.9,
+          "quantidade": 3,
+          "img": {
+            "url": "/assets/ofertas/4/img1.jpg"
+          }
+        }
+      ],
+      "id": 8
     }
   ]
 }

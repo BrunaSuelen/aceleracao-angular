@@ -1,0 +1,22 @@
+<div
+  class="toast {{ exibirToast ? 'show' : '' }}"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+>
+  <div class="toast-header">
+    <img [src]="oferta.imagens[0].url" class="rounded me-2" />
+    <strong class="me-auto">{{ oferta.titulo }}</strong>
+    <small class="text-muted">agora</small>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="toast"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="toast-body">
+    <p>A oferta foi adicionada em seu carrinho!</p>
+    <a routerLink="/ordem-compra">Finalize sua compra</a>
+  </div>
+</div>

@@ -14,10 +14,10 @@ export class OfertaComponent implements OnInit {
 
   public oferta!: Oferta;
   public pedido!: Oferta;
+  public exibirToast!: boolean;
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private ofertasService: OfertasService,
     private carrinhoService: CarrinhoService
   ) { }
@@ -40,6 +40,7 @@ export class OfertaComponent implements OnInit {
 
   public adicionarItemCarrinho(): void {
     this.carrinhoService.incluirItem(this.oferta);
-    // this.router.navigate(['/ordem-compra']);
+    this.exibirToast = true;
+    setTimeout(() => this.exibirToast = false, 50000);
   }
 }

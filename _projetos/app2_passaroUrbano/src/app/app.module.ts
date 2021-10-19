@@ -20,6 +20,7 @@ import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarrinhoService } from './carrinho.service';
 import { CarrinhoVazioComponent } from './carrinho-vazio/carrinho-vazio.component';
+import { ToastPedidoSucessoComponent } from './toast-pedido-sucesso/toast-pedido-sucesso.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CarrinhoVazioComponent } from './carrinho-vazio/carrinho-vazio.componen
     OrdemCompraComponent,
     OrdemCompraSucessoComponent,
     CarrinhoVazioComponent,
+    ToastPedidoSucessoComponent,
   ],
   imports: [
     BrowserModule,

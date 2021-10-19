@@ -1,6 +1,11 @@
 <div class="container">
-  <div class="ordem-compra" *ngIf="idPedidoCompra === undefined">
-    <form novalidate [formGroup]="formulario" (ngSubmit)="confirmarCompra()">
+  <div class="ordem-compra" *ngIf="!idPedidoCompra">
+    <form
+      novalidate
+      [formGroup]="formulario"
+      (ngSubmit)="confirmarCompra()"
+      *ngIf="itensCarrinho?.length; else carrinhoVazio"
+    >
       <h5>Sua Compra</h5>
       <hr />
 
@@ -25,9 +30,21 @@
         <div>
           <div class="row">
             <div class="col">
-              <button type="button" class="btn btn-link">-</button>
+              <button
+                type="button"
+                class="btn"
+                (click)="carrinhoService.diminuirQuantidade(item)"
+              >
+                -
+              </button>
               {{ item.quantidade }}
-              <button type="button" class="btn btn-link">+</button>
+              <button
+                type="button"
+                class="btn"
+                (click)="carrinhoService.adicionarQuantidade(item)"
+              >
+                +
+              </button>
             </div>
           </div>
         </div>
@@ -39,7 +56,10 @@
 
       <div class="form-row">
         <div class="form-group col d-flex justify-content-end">
-          <h4>Total do pedido: 61.80</h4>
+          <h4>
+            Total do pedido:
+            {{ carrinhoService.totalCarrinhoCompras() | currency: "BRL" }}
+          </h4>
         </div>
       </div>
       <br />
@@ -166,6 +186,10 @@
         Confirmar compra
       </button>
     </form>
+
+    <ng-template #carrinhoVazio>
+      <app-carrinho-vazio></app-carrinho-vazio>
+    </ng-template>
   </div>
 
   <div class="ordem-compra" *ngIf="idPedidoCompra">

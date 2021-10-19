@@ -19,6 +19,7 @@ import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra-sucesso.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarrinhoService } from './carrinho.service';
+import { CarrinhoVazioComponent } from './carrinho-vazio/carrinho-vazio.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CarrinhoService } from './carrinho.service';
     DescricaoReduzida,
     OrdemCompraComponent,
     OrdemCompraSucessoComponent,
+    CarrinhoVazioComponent,
   ],
   imports: [
     BrowserModule,

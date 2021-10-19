@@ -7,9 +7,7 @@ import { Oferta } from './shared/ofertas.model';
 class CarrinhoService {
   public itens: ItemCarrinho[] = [];
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) { }
 
   public exibirItens(): ItemCarrinho[] {
     return this.itens;
@@ -25,7 +23,41 @@ class CarrinhoService {
       oferta.imagens[0]
     )
 
-    this.itens.push(itemCarrinho);
+    this.adicionarQuantidade(itemCarrinho);
+  }
+
+  public totalCarrinhoCompras(): number {
+    let total: number = 0;
+
+    this.itens.map((item: ItemCarrinho) => {
+      total += item.valor * item.quantidade
+    })
+
+    return total;
+  }
+
+  public adicionarQuantidade(itemCarrinho: ItemCarrinho): void {
+    let itemCarrinhoEncontrado = this.itens
+      .find((item: ItemCarrinho) => item.id == itemCarrinho.id);
+
+    itemCarrinhoEncontrado
+      ? itemCarrinhoEncontrado.quantidade += 1
+      : this.itens.push(itemCarrinho);
+  }
+
+  public diminuirQuantidade(itemCarrinho: ItemCarrinho): void {
+    let itemCarrinhoEncontrado = this.itens
+      .find((item: ItemCarrinho) => item.id == itemCarrinho.id);
+
+    if (itemCarrinhoEncontrado) {
+      if (itemCarrinho.quantidade == 1) {
+        let indiceItemCarrinhoEncontrado = this.itens.indexOf(itemCarrinhoEncontrado)
+        this.itens.splice(indiceItemCarrinhoEncontrado, 1);
+        return;
+      }
+
+      itemCarrinhoEncontrado.quantidade -= 1;
+    }
   }
 }
 

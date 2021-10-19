@@ -5,6 +5,6 @@ export class ItemCarrinho {
     public descricao_oferta: string,
     public valor: number,
     public quantidade: number,
-    public img: object
+    public img: { url: string }
   ) { }
 }

@@ -2,10 +2,6 @@ import { HttpClient, HttpRequest, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ItemCarrinho } from './shared/item-carrinho.model';
 import { Oferta } from './shared/ofertas.model';
-// import { Observable } from 'rxjs';
-// import { map } from 'rxjs/operators';
-// import { URL_API } from './shared/app.api';
-// import { Pedido } from './shared/pedido.model';
 
 @Injectable()
 class CarrinhoService {
@@ -19,8 +15,7 @@ class CarrinhoService {
     return this.itens;
   }
 
-  public incluirIten(oferta: Oferta): void {
-    // this.itens.push(ofera)
+  public incluirItem(oferta: Oferta): void {
     let itemCarrinho: ItemCarrinho = new ItemCarrinho(
       oferta.id,
       oferta.titulo,
@@ -29,7 +24,9 @@ class CarrinhoService {
       1,
       oferta.imagens[0]
     )
+
+    this.itens.push(itemCarrinho);
   }
 }
 
-export default CarrinhoService
+export { CarrinhoService }

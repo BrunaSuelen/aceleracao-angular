@@ -25,7 +25,6 @@ export class OfertaComponent implements OnInit {
   ngOnInit(): void {
     this.carrinhoService.exibirItens();
     this.route.params.subscribe((parametros: Params) => {
-      console.log(parametros)
       this.ofertasService.getOfertaPorId(parametros.id)
         .then((oferta: Oferta) => {
           this.oferta = oferta;

@@ -22,7 +22,6 @@ export class OndeFicaComponent implements OnInit {
         .getOndeFicaPorId(parametros.id)
         .then((resposta: string) => {
           this.ondeFica = resposta;
-          console.log(resposta)
         })
     });
   }

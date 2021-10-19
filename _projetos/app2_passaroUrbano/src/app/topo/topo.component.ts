@@ -30,7 +30,6 @@ export class TopoComponent implements OnInit {
       .pipe(distinctUntilChanged())
       // Trata dado enviado e retorna valor tratado
       .pipe(switchMap((termo: string) => {
-        console.log('pesquisa http', termo)
         return termo.trim() == ''
           ? of<Oferta[]>([])
           : this.ofertasService.pesquisaOfertas(termo)
@@ -41,14 +40,6 @@ export class TopoComponent implements OnInit {
 
   public pesquisa(termoDaPesquisa: string): void {
     this.subjectPesquisa.next(termoDaPesquisa.trim())
-
-    // this.ofertas = this.ofertasService.pesquisaOfertas(termoDaPesquisa);
-
-    // this.ofertas.subscribe(
-    //   (ofertas: Oferta[]) => console.log(ofertas),
-    //   (error: any) => console.log(error),
-    //   () => console.log('Fluxo de eventos completo')
-    // )
   }
 
   public limpaPesquisa(): void {

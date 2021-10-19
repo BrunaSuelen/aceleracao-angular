@@ -227,6 +227,25 @@
       "complemento": null,
       "formaPagamento": "dinheiro",
       "id": 6
+    },
+    {
+      "endereco": "jjiji",
+      "numero": "324",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 1,
+          "titulo": "Super Burger",
+          "descricao_oferta": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "valor": 29.9,
+          "quantidade": 1,
+          "img": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          }
+        }
+      ],
+      "id": 7
     }
   ]
 }

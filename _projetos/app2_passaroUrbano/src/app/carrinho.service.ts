@@ -59,6 +59,10 @@ class CarrinhoService {
       itemCarrinhoEncontrado.quantidade -= 1;
     }
   }
+
+  public limparCarrinho(): void {
+    this.itens = [];
+  }
 }
 
 export { CarrinhoService }

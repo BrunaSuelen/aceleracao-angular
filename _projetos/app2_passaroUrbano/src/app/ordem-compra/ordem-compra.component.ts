@@ -14,7 +14,6 @@ import { ItemCarrinho } from '../shared/item-carrinho.model';
 export class OrdemCompraComponent implements OnInit {
   public idPedidoCompra!: number;
   public itensCarrinho!: ItemCarrinho[];
-
   public formulario: FormGroup = new FormGroup({
     'endereco': new FormControl(null, [
       Validators.required,
@@ -27,7 +26,7 @@ export class OrdemCompraComponent implements OnInit {
       Validators.maxLength(20)
     ]),
     'complemento': new FormControl(null),
-    'formaPagamento': new FormControl(null, [
+    'formaPagamento': new FormControl('', [
       Validators.required
     ]),
   });
@@ -43,23 +42,25 @@ export class OrdemCompraComponent implements OnInit {
   }
 
   public confirmarCompra(): void {
-    console.log(this.formulario)
     if (this.formulario.status === 'INVALID') {
       this.formulario.get('endereco')?.markAsTouched
       this.formulario.get('numero')?.markAsTouched
       this.formulario.get('complemento')?.markAsTouched
       this.formulario.get('formaPagamento')?.markAsTouched
-    } else {
+
+    } else if (this.itensCarrinho?.length) {
       let pedido: Pedido = new Pedido(
         this.formulario.value.endereco,
         this.formulario.value.numero,
         this.formulario.value.complemento,
-        this.formulario.value.formaPagamento
+        this.formulario.value.formaPagamento,
+        this.carrinhoService.exibirItens()
       )
 
       this.ordemCompraService.efetivarCompra(pedido)
         .subscribe((idPedido: number) => {
           this.idPedidoCompra = idPedido;
+          this.carrinhoService.limparCarrinho();
         })
     }
   }

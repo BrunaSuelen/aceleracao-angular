@@ -27,7 +27,7 @@ npm i -g typescript
 npm i tether --save 
 ```
 
-**Tether**
+**Jquery**
 ```bash
 npm i jquery --save
 ```
